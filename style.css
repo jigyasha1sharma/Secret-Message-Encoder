@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f5f7;
+    color: #252525;
+    min-height: 100vh;
+    padding: 35px 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+}
+
+header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+header p {
+    color: #777777;
+    font-size: 14px;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 13px;
+    border: 1px solid #d8d8d8;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #252525;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    resize: vertical;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #536d8b;
+    box-shadow: 0 0 0 2px rgba(83, 109, 139, 0.1);
+}
+
+textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.settings-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d8d8d8;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #333333;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #536d8b;
+}
+
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#encodeBtn {
+    background-color: #354f6b;
+    color: #ffffff;
+}
+
+#encodeBtn:hover {
+    background-color: #263d55;
+}
+
+#decodeBtn {
+    background-color: #e7ede8;
+    color: #365c40;
+}
+
+#decodeBtn:hover {
+    background-color: #d8e3da;
+}
+
+#clearBtn {
+    background-color: #eeeeee;
+    color: #444444;
+}
+
+#clearBtn:hover {
+    background-color: #e0e0e0;
+}
+
+#copyBtn {
+    background-color: #354f6b;
+    color: #ffffff;
+    padding: 8px 14px;
+}
+
+#copyBtn:hover {
+    background-color: #263d55;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.result-header label {
+    margin-bottom: 0;
+}
+
+#outputText {
+    background-color: #fafafa;
+}
+
+.error-message {
+    color: #c0392b;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+#resultMessage {
+    color: #47734e;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.history-header h2 {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+#clearHistoryBtn {
+    background-color: #eeeeee;
+    color: #444444;
+    padding: 8px 12px;
+}
+
+#clearHistoryBtn:hover {
+    background-color: #e0e0e0;
+}
+
+#historyList {
+    list-style: none;
+}
+
+#historyList li {
+    padding: 12px;
+    margin-bottom: 8px;
+    background-color: #fafafa;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.empty-message {
+    color: #888888;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid #eeeeee;
+    padding-top: 20px;
+    margin-top: 30px;
+    color: #777777;
+    font-size: 12px;
+}
+
+.disclaimer {
+    margin-top: 5px;
+    font-size: 11px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .container {
+        padding: 20px 16px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .settings-section {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+
+    .history-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
